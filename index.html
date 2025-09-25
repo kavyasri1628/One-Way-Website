@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OneWay | Home</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Title -->
-  <header>
-    <h1 class="site-title">OneWay</h1>
+    <!-- Header/Menu -->
+    <header>
+        <div class="menu" id="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Login</a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- Hamburger icon -->
+        <h1 class="title">My Website</h1>
+    </header>
 
-    <!-- Horizontal Menu -->
-    <nav class="menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Slideshow images -->
+    <div class="slideshow">
+        <div class="slides">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+    </div>
 
-  <!-- Centered main content -->
-  <div class="content">
-    <h2>Welcome to OneWay</h2>
-    <p>Your one-stop online shopping destination.</p>
-    <a href="shop.html" class="btn">Start Shopping</a>
-  </div>
+    <!-- Main content -->
+    <main>
+        <h2>Welcome!</h2>
+        <p>This is my website with blue background, white text, and green buttons.</p>
+        <button>Click Me</button>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
