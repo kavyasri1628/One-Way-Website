@@ -1,0 +1,67 @@
+/* Header Menu */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2874f0;
+  padding: 12px 20px;
+  color: white;
+}
+
+header .menu-left a,
+header .login a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+header .menu-left a:hover,
+header .login a:hover {
+  text-decoration: underline;
+}
+
+/* Form Container */
+.form-container {
+  width: 350px;
+  margin: 70px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #2874f0;
+}
+
+.form-container input {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container .btn-blue {
+  width: 100%;
+  padding: 10px;
+  background: #2874f0; /* Blue button */
+  border: none;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.form-container .btn-blue:hover {
+  background: #1a5dcc;
+}
+
+.form-container p {
+  margin-top: 15px;
+}
