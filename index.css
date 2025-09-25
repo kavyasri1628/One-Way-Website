@@ -12,7 +12,7 @@ body {
 
 .content {
   color: white;
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  background: blue; /* semi-transparent overlay */
   padding: 20px;
   border-radius: 10px;
 }
