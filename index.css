@@ -1,17 +1,22 @@
-/* Hero Section */sans-serif;
+/* Centered text styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
   text-align: center;
-  background-color: blue; /* 🔵 this makes background blue */
-  color: white; /* optional: make text white so it’s readable */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
+  height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: white;
+  align-items: center;
 }
+
+.content {
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  padding: 20px;
+  border-radius: 10px;
+}
+/* Hero Section 
 
 .slider {
   position: absolute;
