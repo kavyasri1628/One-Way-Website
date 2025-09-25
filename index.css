@@ -1,51 +1,52 @@
-/* Slider container */
-.slider {
+/* Hero section full-screen background */
+.hero {
   width: 100%;
-  height: 300px;
-  overflow: hidden;
-  margin-bottom: 20px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
   position: relative;
-}
-
-/* Slides */
-.slides {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-/* Keep rest of your styles from before */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0066cc;
-  color: white;
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-header { width: 100%; padding: 15px 0; }
+/* Overlay to make text readable */
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.hero h2 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background: #28a745;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero .btn:hover {
+  background: #218838;
+}
+
+/* Keep existing header/menu styling */
+header { width: 100%; padding: 15px 0; text-align: center; }
 .site-title { margin: 0; font-size: 28px; }
 .menu ul { display: flex; justify-content: space-around; list-style: none; margin: 10px 0 0 0; padding: 0; }
 .menu ul li { flex: 1; }
 .menu ul li a { color: white; text-decoration: none; font-weight: bold; display: block; padding: 10px 0; }
 .menu ul li a:hover { background: rgba(255, 255, 255, 0.2); border-radius: 5px; }
-.content { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-.btn { background: #28a745; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; }
-.btn:hover { background: #218838; }
