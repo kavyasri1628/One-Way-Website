@@ -4,8 +4,12 @@
   justify-content: space-between;
   background: #2874f0;
   padding: 15px;
-}
-
+} 
+{
+sans-serif;
+  text-align: center;
+  background-color: blue; /* 🔵 this makes background blue */
+  color: white; /* optional: make text white so it’s readable */
 .navbar a {
   color: white;
   text-decoration: none;
