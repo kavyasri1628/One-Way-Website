@@ -1,4 +1,7 @@
-/* Hero Section */
+/* Hero Section */sans-serif;
+  text-align: center;
+  background-color: blue; /* 🔵 this makes background blue */
+  color: white; /* optional: make text white so it’s readable */
 .hero {
   position: relative;
   width: 100%;
