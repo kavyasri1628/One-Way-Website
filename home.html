@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | MyShop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkLogin()">
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="menu-left">
+      <a href="home.html">Home</a>
+      <a href="#">Categories</a>
+      <a href="#">Wishlist</a>
+      <a href="#">My Orders</a>
+    </div>
+    <div class="menu-right">
+      <a href="#" onclick="logout()">Logout</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Oneway</h1>
+    <p>Your one-stop online store for everything!</p>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <h2>Shop by Categories</h2>
+    <div class="category-list">
+      <div class="category-card">Electronics</div>
+      <div class="category-card">Clothing</div>
+      <div class="category-card">Groceries</div>
+      <div class="category-card">Books</div>
+       <div class="category-card">Decoration Items</div>
+      <div class="category-card">Accessories</div>
+    </div>
+  </section>
+
+  <script>
+    function checkLogin() {
+      const loggedIn = localStorage.getItem("isLoggedIn");
+      if (!loggedIn) {
+        alert("Please login first!");
+        window.location.href = "login.html";
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem("isLoggedIn");
+      alert("You have logged out.");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
