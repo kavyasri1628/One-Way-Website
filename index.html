@@ -20,39 +20,32 @@
     </nav>
   </header>
 
-  <!-- Hero Slider -->
-  <section class="slider">
-    <div class="slides">
-      <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e" alt="Slide 1" class="slide active">
-      <img src="https://images.unsplash.com/photo-1503602642458-232111445657" alt="Slide 2" class="slide">
-      <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d" alt="Slide 3" class="slide">
+  <!-- Hero Section with background slider -->
+  <section class="hero">
+    <div class="overlay">
+      <h2>Welcome to OneWay</h2>
+      <p>Your one-stop online shopping destination.</p>
+      <a href="shop.html" class="btn">Start Shopping</a>
     </div>
   </section>
 
-  <!-- Centered content -->
-  <div class="content">
-    <h2>Welcome to OneWay</h2>
-    <p>Your one-stop online shopping destination.</p>
-    <a href="shop.html" class="btn">Start Shopping</a>
-  </div>
-
   <script>
     // Hero slider logic
-    let currentSlide = 0;
-    const slides = document.querySelectorAll(".slide");
+    const hero = document.querySelector(".hero");
+    const images = [
+      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e",
+      "https://images.unsplash.com/photo-1503602642458-232111445657",
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d"
+    ];
+    let current = 0;
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove("active");
-        if(i === index) slide.classList.add("active");
-      });
+    function changeBackground() {
+      hero.style.backgroundImage = `url(${images[current]})`;
+      current = (current + 1) % images.length;
     }
 
-    // Auto-slide every 3 seconds
-    setInterval(() => {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-    }, 3000);
+    changeBackground(); // initial
+    setInterval(changeBackground, 3000); // every 3 seconds
   </script>
 </body>
 </html>
