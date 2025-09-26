@@ -5,49 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OneWay | Home</title>
   <style>
-    /* Reset default margin and padding */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body, html {
+    html, body {
       height: 100%;
       font-family: Arial, sans-serif;
+      background-color: #007BFF; /* Blue background */
       color: white;
     }
 
-    /* Hero section */
+    /* Hero Section */
     .hero {
       height: 100vh;
       width: 100%;
-      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      overflow: hidden;
-    }
-
-    /* Sliding background images */
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-size: cover;
-      background-position: center;
-      animation: slide 15s infinite;
-      z-index: -1;
-    }
-
-    @keyframes slide {
-      0% { background-image: url('images/img1.jpg'); }
-      33% { background-image: url('images/img2.jpg'); }
-      66% { background-image: url('images/img3.jpg'); }
-      100% { background-image: url('images/img1.jpg'); }
+      padding: 0 20px;
     }
 
     /* Menu */
@@ -56,9 +32,9 @@
       position: absolute;
       top: 0;
       left: 0;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.3);
       display: flex;
-      justify-content: space-around; /* equal partitions */
+      justify-content: space-around; /* Equal partitions */
       padding: 15px 0;
     }
 
@@ -66,15 +42,14 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      padding: 5px 10px;
       transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #00ff00; /* green highlight */
+      color: #00ff00;
     }
 
-    /* Hero text */
+    /* Hero Text */
     .hero h1 {
       font-size: 4em;
       margin-bottom: 20px;
@@ -101,16 +76,18 @@
     .hero button:hover {
       background-color: darkgreen;
     }
+
   </style>
 </head>
 <body>
 
   <!-- Navigation Menu -->
   <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-<a href="#">Login</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
   </nav>
 
   <!-- Hero Section -->
