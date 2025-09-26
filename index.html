@@ -1,46 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slideshow Background</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1 class="site-title">OneWay</h1>
-    <nav class="menu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Header/Menu -->
+    <header>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Login</a>
+        </div>
+        <h1 class="title">My Website</h1>
+    </header>
 
-  <!-- Centered Content -->
-  <div class="content">
-    <h2>Welcome to OneWay</h2>
-    <p>Your one-stop shopping destination</p>
-    <button class="btn">Start Shopping</button>
-  </div>
+    <!-- Scrolling images -->
+    <div class="slideshow">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+    </div>
 
-  <!-- Script for background slideshow -->
-  <script>
-    let images = [
-      "https://picsum.photos/id/1015/1920/1080",
-      "https://picsum.photos/id/1018/1920/1080",
-      "https://picsum.photos/id/1025/1920/1080"
-    ];
-    let i = 0;
-    function changeBackground() {
-      document.body.style.backgroundImage = `url(${images[i]})`;
-      i = (i + 1) % images.length;
-    }
-    setInterval(changeBackground, 4000);
-    window.onload = changeBackground;
-  </script>
+    <!-- Main content -->
+    <main>
+        <h2>Welcome!</h2>
+        <p>This is my website with blue background and white text.</p>
+        <button>Click Me</button>
+    </main>
 </body>
 </html>
