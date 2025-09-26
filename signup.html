@@ -3,24 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up | MyShop</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Sign Up | OneWay</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; background-color: #007BFF; color: white; font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; text-align: center; flex-direction: column; }
+    nav { width: 100%; position: absolute; top: 0; display: flex; justify-content: space-around; padding: 15px 0; background: rgba(0,0,0,0.3); }
+    nav a { color: white; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+    nav a:hover { color: #00ff00; }
+    form { display: flex; flex-direction: column; align-items: center; margin-top: 20px; }
+    input { margin: 10px 0; padding: 10px; width: 250px; border-radius: 5px; border: none; }
+    button { margin-top: 10px; padding: 10px 25px; font-size: 1em; background-color: green; border: none; border-radius: 5px; color: white; cursor: pointer; transition: background 0.3s; }
+    button:hover { background-color: darkgreen; }
+    p { margin-top: 15px; }
+    p a { color: #00ff00; text-decoration: none; }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="menu">
-      <a href="index.html">Home</a>
-    </div>
-  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
 
-  <main class="form-container">
-    <h2>Sign Up</h2>
-    <form>
-      <input type="email" placeholder="Email" required><br>
-      <input type="password" placeholder="Password" required><br>
-      <button type="submit">Create Account</button><br>
-      <p>Already have an account? <a href="login.html">Login</a></p>
-    </form>
-  </main>
+  <h1>Sign Up</h1>
+
+  <form>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Create Password" required>
+    <input type="password" placeholder="Confirm Password" required>
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <p>Already have an account? <a href="login.html">Login</a></p>
 </body>
 </html>
