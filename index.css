@@ -1,79 +1,93 @@
-/* Reset */
-body, html {
+/* General page styling */
+body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: Arial, sans-serif;
-  color: white;
-  text-align: center;
-}
-
-/* Background slideshow */
-body {
+  height: 100vh;
+  background-color: #0066cc; /* fallback blue */
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   transition: background-image 1s ease-in-out;
+  color: white; /* ⚪ white text */
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Header */
+/* Dark overlay for better text visibility */
+body::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 80, 0.5);
+  z-index: 0;
+}
+
+header, .content {
+  position: relative;
+  z-index: 1; /* keep content above overlay */
+}
+
+/* Header & title */
 header {
   position: absolute;
-  top: 0;
+  top: 10px;
   width: 100%;
   text-align: center;
 }
 
 .site-title {
-  margin: 10px 0;
+  margin: 0;
   font-size: 28px;
 }
 
-/* Horizontal Menu with equal partitions */
+/* Horizontal Menu */
 .menu ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; /* equal partitions */
   list-style: none;
   margin: 10px 0 0 0;
   padding: 0;
-  background: rgba(0,0,0,0.4);
 }
 
 .menu ul li {
-  flex: 1;
+  flex: 1; /* equal width for each menu item */
 }
 
 .menu ul li a {
-  display: block;
-  padding: 12px 0;
-  text-decoration: none;
   color: white;
+  text-decoration: none;
   font-weight: bold;
+  display: block;
+  padding: 10px 0;
 }
 
 .menu ul li a:hover {
   background: rgba(255, 255, 255, 0.2);
-}
-
-/* Centered content */
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Green Button */
-.btn {
-  background: #28a745;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  font-size: 16px;
   border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
+}
+
+/* Center content */
+.content {
+  max-width: 600px;
+}
+
+.btn {
+  display: inline-block;
+  background: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .btn:hover {
-  background: #218838;
+  background: darkgreen;
 }
