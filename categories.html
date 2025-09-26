@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OneWay | Categories</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Horizontal top menu */
+        .top-menu {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
+
+        .top-menu button {
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        /* Category buttons grid */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .categories-grid button {
+            width: 150px;
+            height: 80px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,13 +45,26 @@
 
 <div class="container">
     <h1>Categories</h1>
-    <p>Explore our wide range of products:</p>
-    <ul style="list-style:none;">
-        <li><button>Men</button></li>
-        <li><button>Women</button></li>
-        <li><button>Children</button></li>
-        <li><button>Baby</button></li>
-    </ul>
+
+    <!-- Top horizontal menu -->
+    <div class="top-menu">
+        <button onclick="#">My Products</button>
+        <button onclick="#">Wishlist</button>
+        <button onclick="#">My Orders</button>
+        <button onclick="#">Profile</button>
+    </div>
+
+    <!-- Category buttons grid -->
+    <div class="categories-grid">
+        <button>Clothing</button>
+        <button>Furniture</button>
+        <button>Decoration Items</button>
+        <button>Electronics</button>
+        <button>Health Care</button>
+        <button>Sports</button>
+        <button>Toys</button>
+        <button>Books</button>
+    </div>
 </div>
 
 </body>
