@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneWay | Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header/Menu -->
-    <header>
-        <div class="menu">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">Login</a>
-        </div>
-        <h1 class="title">My Website</h1>
-    </header>
+  <!-- Title -->
+  <header>
+    <h1 class="site-title">OneWay</h1>
 
-    <!-- Scrolling images -->
-    <div class="slideshow">
-        <img src="https://share.google/images/PiP0vB0XKG2G0toxf">
-        <img src="image2.jpg="Image 2">
-        <img src="image3.jpg" alt="Image 3">
-    </div>
+    <!-- Horizontal Menu -->
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Main content -->
-    <main>
-        <h2>Welcome!</h2>
-        <p>OneWay</p>
-        <button>Click Me</button>
-    </main>
+  <!-- Centered main content -->
+  <div class="content">
+    <h2>Welcome to OneWay</h2>
+    <p>Your one-stop online shopping destination.</p>
+    <a href="shop.html" class="btn">Start Shopping</a>
+  </div>
+
+  <!-- Background Slideshow Script -->
+  <script>
+    let images = [
+      "https://img.freepik.com/free-photo/online-shopping-concept_23-2148572674.jpg",
+      "https://img.freepik.com/free-photo/shopping-bags-cart_23-2148879476.jpg",
+      "https://img.freepik.com/free-photo/flat-lay-online-shopping-concept_23-2148563456.jpg"
+    ];
+
+    let i = 0;
+    function changeBackground() {
+      document.body.style.backgroundImage = `url(${images[i]})`;
+      i = (i + 1) % images.length;
+    }
+    setInterval(changeBackground, 4000);
+    window.onload = changeBackground;
+  </script>
 </body>
 </html>
