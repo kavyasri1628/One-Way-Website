@@ -4,30 +4,121 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OneWay | Home</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    /* Hero section */
+    .hero {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Sliding background images */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-size: cover;
+      background-position: center;
+      animation: slide 15s infinite;
+      z-index: -1;
+    }
+
+    @keyframes slide {
+      0% { background-image: url('images/img1.jpg'); }
+      33% { background-image: url('images/img2.jpg'); }
+      66% { background-image: url('images/img3.jpg'); }
+      100% { background-image: url('images/img1.jpg'); }
+    }
+
+    /* Menu */
+    nav {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      justify-content: space-around; /* equal partitions */
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ff00; /* green highlight */
+    }
+
+    /* Hero text */
+    .hero h1 {
+      font-size: 4em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.5em;
+      max-width: 600px;
+    }
+
+    /* Button */
+    .hero button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: green;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: darkgreen;
+    }
+  </style>
 </head>
 <body>
-  <!-- Background slideshow -->
-  <div class="slideshow"></div>
 
-  <!-- Title + Menu -->
-  <header>
-    <h1 class="site-title">OneWay</h1>
-    <nav class="menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Navigation Menu -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
 
-  <!-- Centered Content -->
-  <div class="content">
-    <h2>Welcome to OneWay</h2>
-    <p>Your one-stop online shopping destination.</p>
-    <a href="shop.html" class="btn">Start Shopping</a>
-  </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to OneWay</h1>
+    <p>Your one-stop solution for all your needs. Explore, discover, and enjoy!</p>
+    <button>Get Started</button>
+  </section>
+
 </body>
 </html>
