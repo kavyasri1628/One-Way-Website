@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OneWay | Home</title>
+  <title>Slideshow Background</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,40 +12,35 @@
     <h1 class="site-title">OneWay</h1>
     <nav class="menu">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Login</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Login</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section with background slider -->
-  <section class="hero">
-    <div class="overlay">
-      <h2>Welcome to OneWay</h2>
-      <p>Your one-stop online shopping destination.</p>
-      <a href="shop.html" class="btn">Start Shopping</a>
-    </div>
-  </section>
+  <!-- Centered Content -->
+  <div class="content">
+    <h2>Welcome to OneWay</h2>
+    <p>Your one-stop shopping destination</p>
+    <button class="btn">Start Shopping</button>
+  </div>
 
+  <!-- Script for background slideshow -->
   <script>
-    // Hero slider logic
-    const hero = document.querySelector(".hero");
-    const images = [
-      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e",
-      "https://images.unsplash.com/photo-1503602642458-232111445657",
-      "https://images.unsplash.com/photo-1491553895911-0055eca6402d"
+    let images = [
+      "https://picsum.photos/id/1015/1920/1080",
+      "https://picsum.photos/id/1018/1920/1080",
+      "https://picsum.photos/id/1025/1920/1080"
     ];
-    let current = 0;
-
+    let i = 0;
     function changeBackground() {
-      hero.style.backgroundImage = `url(${images[current]})`;
-      current = (current + 1) % images.length;
+      document.body.style.backgroundImage = `url(${images[i]})`;
+      i = (i + 1) % images.length;
     }
-
-    changeBackground(); // initial
-    setInterval(changeBackground, 3000); // every 3 seconds
+    setInterval(changeBackground, 4000);
+    window.onload = changeBackground;
   </script>
 </body>
 </html>
