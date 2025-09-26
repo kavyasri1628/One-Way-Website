@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | OneWay</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; background-color: #007BFF; color: white; font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; text-align: center; flex-direction: column; }
-    nav { width: 100%; position: absolute; top: 0; display: flex; justify-content: space-around; padding: 15px 0; background: rgba(0,0,0,0.3); }
-    nav a { color: white; text-decoration: none; font-weight: bold; transition: color 0.3s; }
-    nav a:hover { color: #00ff00; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | OneWay</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body, html { font-family: Arial,sans-serif; background:#007BFF; color:white; text-align:center; }
+nav {
+  width:100%;
+  display:flex;
+  justify-content:space-around;
+  padding:15px 0;
+  background: rgba(0,0,0,0.3);
+  position: sticky; top:0;
+}
+nav a { color:white; text-decoration:none; font-weight:bold; transition:color 0.3s; }
+nav a:hover { color:#00ff00; }
+
+.container {
+  max-width:800px;
+  margin:100px auto;
+  padding:20px;
+  background: rgba(0,0,0,0.3);
+  border-radius:10px;
+}
+</style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="login.html">Login</a>
-    <a href="doc.html">Categories</a>
-   
-  </nav>
 
-  <h1>About OneWay</h1>
-  <p>OneWay is your one-stop platform for seamless online experiences. We connect you with what matters most.</p>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="categories.html">Categories</a>
+  <a href="home.html">Dashboard</a>
+  <a href="login.html">Login</a>
+</nav>
+
+<div class="container">
+  <h1>About Us</h1>
+  <p>Welcome to OneWay! We are dedicated to providing the best online shopping experience.</p>
+  <p>Our mission is to make shopping easy and enjoyable for everyone.</p>
+</div>
+
 </body>
 </html>
