@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | OneWay</title>
+  <title>Categories | OneWay</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -15,11 +15,11 @@
       text-align: center;
     }
 
-    /* Navigation */
-    .navbar {
+    /* Navbar */
+    nav {
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around; /* Equal spacing */
       padding: 15px 0;
       background: rgba(0,0,0,0.3);
       position: sticky;
@@ -27,36 +27,28 @@
       z-index: 100;
     }
 
-    .navbar a {
+    nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
-      margin: 0 15px;
       transition: color 0.3s;
     }
 
-    .navbar a:hover { color: #00ff00; }
+    nav a:hover { color: #00ff00; }
 
-    /* Hero Section */
-    .hero {
-      padding: 80px 20px;
+    /* Page Header */
+    h1 {
+      margin: 60px 0 20px;
+      font-size: 3em;
     }
-
-    .hero h1 { font-size: 3.5em; margin-bottom: 20px; }
-    .hero p { font-size: 1.5em; }
 
     /* Categories Section */
-    .categories {
-      padding: 40px 20px;
-    }
-
-    .categories h2 { font-size: 2.5em; margin-bottom: 30px; }
-
     .category-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      padding: 20px;
     }
 
     .category-card {
@@ -73,57 +65,31 @@
       background: rgba(255,255,255,0.2);
       transform: translateY(-5px);
     }
-
   </style>
 </head>
-<body onload="checkLogin()">
+<body>
 
   <!-- Navbar -->
-  <header class="navbar">
-    <div class="menu-left">
-      <a href="home.html">Home</a>
-      <a href="#">Categories</a>
-      <a href="#">Wishlist</a>
-      <a href="#">My Orders</a>
-    </div>
-    <div class="menu-right">
-      <a href="#" onclick="logout()">Logout</a>
-    </div>
-  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="home.html">Dashboard</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to OneWay</h1>
-    <p>Your one-stop online store for everything!</p>
-  </section>
+  <!-- Page Header -->
+  <h1>Categories</h1>
 
-  <!-- Categories Section -->
-  <section class="categories">
-    <h2>Shop by Categories</h2>
-    <div class="category-list">
-      <div class="category-card">Electronics</div>
-      <div class="category-card">Clothing</div>
-      <div class="category-card">Groceries</div>
-      <div class="category-card">Books</div>
-      <div class="category-card">Decoration Items</div>
-      <div class="category-card">Accessories</div>
-    </div>
-  </section>
+  <!-- Categories List -->
+  <div class="category-list">
+    <div class="category-card">Electronics</div>
+    <div class="category-card">Clothing</div>
+    <div class="category-card">Groceries</div>
+    <div class="category-card">Books</div>
+    <div class="category-card">Decoration Items</div>
+    <div class="category-card">Accessories</div>
+  </div>
 
-  <script>
-    function checkLogin() {
-      const loggedIn = localStorage.getItem("isLoggedIn");
-      if (!loggedIn) {
-        alert("Please login first!");
-        window.location.href = "login.html";
-      }
-    }
-
-    function logout() {
-      localStorage.removeItem("isLoggedIn");
-      alert("You have logged out.");
-      window.location.href = "login.html";
-    }
-  </script>
 </body>
 </html>
