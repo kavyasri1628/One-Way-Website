@@ -1,123 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home | OneWay</title>
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
-html, body {
-  font-family: Arial, sans-serif;
-  height: 100%;
-  color: white;
-  text-align: center;
-  overflow-x: hidden;
-}
-
-/* Full-page sliding background */
-body {
-  animation: slideBackground 20s infinite;
-  background-size: cover;
-  background-position: center;
-  transition: background 1s ease-in-out;
-}
-
-/* Keyframes for sliding images */
-@keyframes slideBackground {
-  0% { background-image: url('https://via.placeholder.com/1600x900/1abc9c/ffffff'); }
-  25% { background-image: url('https://via.placeholder.com/1600x900/3498db/ffffff'); }
-  50% { background-image: url('https://via.placeholder.com/1600x900/9b59b6/ffffff'); }
-  75% { background-image: url('https://via.placeholder.com/1600x900/e74c3c/ffffff'); }
-  100% { background-image: url('https://via.placeholder.com/1600x900/1abc9c/ffffff'); }
-}
-
-/* Navbar */
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  padding: 15px 0;
-  background: rgba(0,0,0,0.3);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-nav a { color: white; text-decoration: none; font-weight: bold; transition: color 0.3s;}
-nav a:hover { color:#00ff00; }
-
-/* Containers */
-.container {
-  max-width: 1000px;
-  margin: 100px auto;
-  padding: 20px;
-  background: rgba(0,0,0,0.5); /* semi-transparent so background shows */
-  border-radius: 10px;
-}
-
-/* Categories cards */
-.category-list {
-  display:flex; flex-wrap:wrap; justify-content:center; gap:20px;
-}
-.category-card {
-  background: rgba(255,255,255,0.1);
-  padding:20px 30px; border-radius:10px; min-width:150px;
-  font-size:1.2em; cursor:pointer;
-  transition:background 0.3s, transform 0.3s;
-}
-.category-card:hover { background: rgba(255,255,255,0.2); transform: translateY(-5px); }
-
-/* Buttons */
-button {
-  padding:10px 20px; font-size:1em;
-  background-color:green; border:none; border-radius:5px; color:white;
-  cursor:pointer; transition:background 0.3s;
-}
-button:hover { background-color:darkgreen; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneWay | Home</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body onload="checkLogin()">
+<body>
 
 <nav>
-  <a href="home.html">Home</a>
-  <a href="categories.html">Categories</a>
-  <a href="#">Wishlist</a>
-  <a href="#">My Orders</a>
-  <a href="#" onclick="logout()">Logout</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="categories.html">Categories</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
 </nav>
 
-<!-- Hero Section -->
-<div class="container">
-  <h1>Welcome to OneWay</h1>
-  <p>Your one-stop online store for everything!</p>
-  <button onclick="window.location.href='categories.html'">Shop Now</button>
+<div class="container hero">
+    <h1>Welcome to OneWay</h1>
+    <p>Your one-stop online shopping destination</p>
+    <button onclick="window.location.href='categories.html'">Start Shopping</button>
 </div>
 
-<!-- Categories Section -->
-<div class="container">
-  <h2>Shop by Categories</h2>
-  <div class="category-list">
-    <div class="category-card">Electronics</div>
-    <div class="category-card">Clothing</div>
-    <div class="category-card">Groceries</div>
-    <div class="category-card">Books</div>
-    <div class="category-card">Decoration Items</div>
-    <div class="category-card">Accessories</div>
-  </div>
-</div>
-
-<script>
-function checkLogin() {
-  const loggedIn = localStorage.getItem("isLoggedIn");
-  if (!loggedIn) {
-    alert("Please login first!");
-    window.location.href="login.html";
-  }
-}
-function logout() {
-  localStorage.removeItem("isLoggedIn");
-  alert("Logged out.");
-  window.location.href="login.html";
-}
-</script>
 </body>
 </html>
