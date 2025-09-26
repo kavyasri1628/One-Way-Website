@@ -1,52 +1,79 @@
-/* Hero section full-screen background */
-.hero {
-  width: 100%;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Overlay to make text readable */
-.hero .overlay {
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
-  padding: 30px;
-  border-radius: 10px;
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: white;
   text-align: center;
 }
 
-.hero h2 {
-  color: white;
-  font-size: 36px;
-  margin-bottom: 15px;
+/* Background slideshow */
+body {
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
 }
 
-.hero p {
-  color: white;
-  font-size: 18px;
-  margin-bottom: 20px;
+/* Header */
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
 }
 
-.hero .btn {
-  background: #28a745;
-  color: white;
-  padding: 10px 25px;
-  border-radius: 5px;
+.site-title {
+  margin: 10px 0;
+  font-size: 28px;
+}
+
+/* Horizontal Menu with equal partitions */
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.menu ul li {
+  flex: 1;
+}
+
+.menu ul li a {
+  display: block;
+  padding: 12px 0;
   text-decoration: none;
+  color: white;
   font-weight: bold;
 }
 
-.hero .btn:hover {
-  background: #218838;
+.menu ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
-/* Keep existing header/menu styling */
-header { width: 100%; padding: 15px 0; text-align: center; }
-.site-title { margin: 0; font-size: 28px; }
-.menu ul { display: flex; justify-content: space-around; list-style: none; margin: 10px 0 0 0; padding: 0; }
-.menu ul li { flex: 1; }
-.menu ul li a { color: white; text-decoration: none; font-weight: bold; display: block; padding: 10px 0; }
-.menu ul li a:hover { background: rgba(255, 255, 255, 0.2); border-radius: 5px; }
+/* Centered content */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Green Button */
+.btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background: #218838;
+}
