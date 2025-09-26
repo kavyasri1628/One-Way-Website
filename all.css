@@ -1,34 +1,99 @@
-/* Body styling */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background-color: #0066cc; /* Blue background */
-  display: flex;
-  justify-content: center; /* Horizontal center */
-  align-items: center;     /* Vertical center */
-  text-align: center;      /* Center text */
-  font-family: Arial, sans-serif;
-  color: white;            /* White text */
+    background-color: #0a3d62; /* Blue background */
+    color: #ffffff;            /* White text */
+    text-align: center;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    background-color: #062c45;
+    padding: 15px 0;
+}
+
+nav a {
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #28a745; /* Green button */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #218838;
 }
 
 /* Container */
 .container {
-  max-width: 600px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(0,0,0,0.3); /* Slight transparent background */
+    border-radius: 10px;
 }
 
-/* Green button */
-.btn {
-  background-color: #28a745; /* Green button */
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background: url('../images/hero1.jpg') no-repeat center center/cover;
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1200px;
 }
 
-.btn:hover {
-  background-color: #218838; /* Darker green on hover */
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+}
+
+textarea {
+    width: 300px;
+    height: 100px;
 }
