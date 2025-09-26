@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slideshow Background | OneWay</title>
+  <title>OneWay Shopping</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
+  <!-- Title -->
   <header>
     <h1 class="site-title">OneWay</h1>
     <nav class="menu">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="login.html">Login</a></li>
       </ul>
@@ -27,13 +27,14 @@
     <button class="btn">Start Shopping</button>
   </div>
 
-  <!-- Script for background slideshow -->
+  <!-- Background Slideshow -->
   <script>
     let images = [
-      "https://share.google/images/bkuPAoWrGcfpF3AiB",
-      "https://share.google/images/ftG4ISBn9lwWO9ryM",
-      "https://share.google/images/PiP0vB0XKG2G0toxf"
+      "https://drive.google.com/uc?export=view&id=bkuPAoWrGcfpF3AiB",
+      "https://drive.google.com/uc?export=view&id=ftG4ISBn9lwWO9ryM",
+      "https://drive.google.com/uc?export=view&id=PiP0vB0XKG2G0toxf"
     ];
+
     let i = 0;
     function changeBackground() {
       document.body.style.backgroundImage = `url(${images[i]})`;
