@@ -6,16 +6,31 @@
     <title>OneWay | Categories</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Horizontal top menu */
-        .top-menu {
+        /* Horizontal top partitions */
+        .top-partitions {
             display: flex;
-            justify-content: space-around;
             margin-bottom: 30px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            overflow: hidden;
         }
 
-        .top-menu button {
+        .partition {
             flex: 1;
-            margin: 0 10px;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            border-right: 1px solid rgba(255,255,255,0.3);
+            transition: background-color 0.3s;
+        }
+
+        .partition:last-child {
+            border-right: none;
+        }
+
+        .partition:hover {
+            background-color: rgba(40, 167, 69, 0.3); /* green hover */
         }
 
         /* Category buttons grid */
@@ -46,12 +61,12 @@
 <div class="container">
     <h1>Categories</h1>
 
-    <!-- Top horizontal menu -->
-    <div class="top-menu">
-        <button onclick="#">My Products</button>
-        <button onclick="#">Wishlist</button>
-        <button onclick="#">My Orders</button>
-        <button onclick="#">Profile</button>
+    <!-- Top partitions -->
+    <div class="top-partitions">
+        <div class="partition">My Products</div>
+        <div class="partition">Wishlist</div>
+        <div class="partition">My Orders</div>
+        <div class="partition">Profile</div>
     </div>
 
     <!-- Category buttons grid -->
