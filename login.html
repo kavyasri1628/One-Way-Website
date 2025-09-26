@@ -1,76 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login | OneWay</title>
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body, html { font-family: Arial,sans-serif; background:#007BFF; color:white; text-align:center; height:100%; }
-nav {
-  width:100%;
-  display:flex;
-  justify-content:space-around;
-  padding:15px 0;
-  background: rgba(0,0,0,0.3);
-  position: sticky;
-  top:0;
-}
-nav a { color:white; text-decoration:none; font-weight:bold; transition:color 0.3s; }
-nav a:hover { color:#00ff00; }
-
-.container {
-  max-width:400px;
-  margin:100px auto;
-  padding:20px;
-  background: rgba(0,0,0,0.5);
-  border-radius:10px;
-}
-
-input {
-  margin:10px 0;
-  padding:10px;
-  width:90%;
-  border-radius:5px;
-  border:none;
-}
-button {
-  padding:10px 20px;
-  margin-top:10px;
-  background:green;
-  border:none;
-  color:white;
-  border-radius:5px;
-  cursor:pointer;
-}
-button:hover { background:darkgreen; }
-p a { color:#00ff00; text-decoration:none; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneWay | Login</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="categories.html">Categories</a>
-  <a href="signup.html">Sign Up</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="categories.html">Categories</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
 <div class="container">
-  <h1>Login</h1>
-  <form onsubmit="login(event)">
-    <input type="email" placeholder="Email" required>
-    <input type="password" placeholder="Password" required>
-    <button type="submit">Sign In</button>
-  </form>
-  <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    <h1>Login</h1>
+    <form onsubmit="redirectHome(event)">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Sign In</button>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </form>
 </div>
 
 <script>
-function login(e) {
-  e.preventDefault();
-  localStorage.setItem("isLoggedIn","true");
-  alert("Login successful!");
-  window.location.href="home.html";
+function redirectHome(event) {
+    event.preventDefault();
+    window.location.href = 'index.html';
 }
 </script>
 
