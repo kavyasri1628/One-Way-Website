@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OneWay Shopping</title>
+  <title>Slideshow Background</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Title -->
+  <!-- Header -->
   <header>
     <h1 class="site-title">OneWay</h1>
     <nav class="menu">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Login</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Login</a></li>
       </ul>
     </nav>
   </header>
@@ -23,18 +23,17 @@
   <!-- Centered Content -->
   <div class="content">
     <h2>Welcome to OneWay</h2>
-    <p>Your one-stop online shopping destination</p>
+    <p>Your one-stop shopping destination</p>
     <button class="btn">Start Shopping</button>
   </div>
 
   <!-- Script for background slideshow -->
   <script>
     let images = [
-      ""https://picsum.photos/id/1015/1600/900",
-"https://picsum.photos/id/1016/1600/900",
-"https://picsum.photos/id/1018/1600/900"
+      "https://picsum.photos/id/1015/1920/1080",
+      "https://picsum.photos/id/1018/1920/1080",
+      "https://picsum.photos/id/1025/1920/1080"
     ];
-
     let i = 0;
     function changeBackground() {
       document.body.style.backgroundImage = `url(${images[i]})`;
