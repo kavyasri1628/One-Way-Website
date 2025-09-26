@@ -1,78 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up | OneWay</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body {
-      height: 100%;
-      font-family: Arial, sans-serif;
-      background-color: #007BFF;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      flex-direction: column;
-    }
-
-    /* Navbar */
-    nav {
-      width: 100%;
-      position: absolute;
-      top: 0;
-      display: flex;
-      justify-content: space-around;
-      padding: 15px 0;
-      background: rgba(0,0,0,0.3);
-    }
-    nav a { color: white; text-decoration: none; font-weight: bold; transition: color 0.3s; }
-    nav a:hover { color: #00ff00; }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 80px;
-    }
-    input { margin: 10px 0; padding: 10px; width: 250px; border-radius: 5px; border: none; }
-    button { margin-top: 10px; padding: 10px 25px; font-size: 1em; background-color: green; border: none; border-radius: 5px; color: white; cursor: pointer; transition: background 0.3s; }
-    button:hover { background-color: darkgreen; }
-    p { margin-top: 15px; }
-    p a { color: #00ff00; text-decoration: none; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneWay | Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <a href="index.html">Index</a>
-    <a href="home.html">Home</a>
+<nav>
+    <a href="index.html">Home</a>
     <a href="about.html">About</a>
+    <a href="categories.html">Categories</a>
     <a href="contact.html">Contact</a>
-    <a href="doc.html">Categories</a>
-  </nav>
+</nav>
 
-  <h1>Sign Up</h1>
+<div class="container">
+    <h1>Sign Up</h1>
+    <form onsubmit="redirectHome(event)">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Create Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
 
-  <form onsubmit="signup(event)">
-    <input type="email" placeholder="Email" required>
-    <input type="password" placeholder="Create Password" required>
-    <input type="password" placeholder="Confirm Password" required>
-    <button type="submit">Sign Up</button>
-  </form>
+<script>
+function redirectHome(event) {
+    event.preventDefault();
+    window.location.href = 'index.html';
+}
+</script>
 
-  <p>Already have an account? <a href="login.html">Login</a></p>
-
-  <script>
-    function signup(event) {
-      event.preventDefault();
-      localStorage.setItem("isLoggedIn", "true");
-      alert("Sign Up successful!");
-      window.location.href = "home.html"; // Redirect to Home after signup
-    }
-  </script>
 </body>
 </html>
